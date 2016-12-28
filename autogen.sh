@@ -12,7 +12,7 @@ test -d libpwq || \
 
 test -d libdispatch
 if [ $? -ne 0 ] ; then
-  svn co http://svn.macosforge.org/repository/libdispatch/trunk@197 libdispatch
+  git clone -b macosforge/trunk https://github.com/apple/swift-corelibs-libdispatch.git libdispatch
   cd libdispatch
   patch -p0 < ../patch/disable_dispatch_read.patch
   patch -p0 < ../patch/libdispatch-r197_v2.patch
